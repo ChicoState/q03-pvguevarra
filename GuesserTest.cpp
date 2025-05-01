@@ -76,5 +76,5 @@ TEST(GuesserTest, remaining_countdown_after_lock_occurs)
 	guess.match("aaaaaaaaa");
 	guess.match("Passwora");
 	guess.match("passwods");
-	ASSERT_EQ(guess.remaining(), 1); // Fails due to implementation. Remaining drops even after being locked when it shouldn't
+	ASSERT_EQ(guess.remaining(), 1); // Fails due to implementation. Remaining doesn't drop after being locked. I tested it assuming it does
 }
